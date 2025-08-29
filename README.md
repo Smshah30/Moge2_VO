@@ -70,7 +70,7 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 
 #### Images
 
-![Woble in Intrinsics K for KITTI](results/normalized_intrinsic.png)
+![Woble in Intrinsics K for KITTI](results/normalized_intrinsics_parameters.png)
 
 ![Initial ICP+RANSAC](results/kitti_vo_trajectory_rnsc.png)
 
@@ -80,11 +80,17 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 ![Video 1](results/vid1_est.png)
 
 #### Drone Video 3 ( Cut from `0:39` to `1:05`) [Video2](https://www.youtube.com/watch?v=4zWq3pkJ8NI)
+Constant K
 ![Video 2 Constant K](results/vid2_est.png)
+
+Dynamic K
 ![Video 2 Dynamic K](results/vid22_est.png)
 
 #### Drone Video 3 [Video3](https://www.youtube.com/watch?v=Zwa5i1yZu7w)
+Constant K
 ![Video 3 Constant K](results/vid3_est.png)
+
+Dynamic K
 ![Video 3 Dynamic K](results/vid32_est.png)
 
 
@@ -92,6 +98,8 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 - For some reason the results on KITTI are worse then that with just Visual Odometry that I have acheived in past.
 - It is better to have Constant K for drone videos (scale std was >0.2 compared to 0.08-0.02 for KITTI)
 - Dynamic K helps with stable videos.
+
+
 
 
 
