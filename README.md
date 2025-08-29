@@ -59,6 +59,43 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 `--gt_poses` is optional 
 
 
+##Results
+
+#### Observations
+- Generally for KITTI dataset the scale remained pretty consistent. Hence, no need to extract Affine-Inv points.
+- Intrinsics however were inconsistent for consecutive frames.
+  - For KITTI dataset, though there were wobles in K, in the end the ATE was less for Dynamic K rather than a Constant K.
+  - For Drone videos, having Constant K `--use_first_K` helped the final result to be less shaky.
+- Surprising, initially ICP+RANSAC gave pretty good result APE <=2 . However, at the end of the dataset the ATE increased to 303 (MAIN REASON FOR THE DELAY)
+
+#### Images
+
+![Woble in Intrinsics K for KITTI](results/normalized_intrinsic.png)
+
+![Initial ICP+RANSAC](results/kitti_vo_trajectory_rnsc.png)
+
+![Final Seq-00](results/kitti_vo_trajectory_3d2.png)
+
+#### Drone Video 1 ( Cut from `1:49` to `2:55`) [Video1](https://www.youtube.com/watch?v=8zJ5wv6NIlY)
+![Video 1](results/vid1_est.png)
+
+#### Drone Video 3 ( Cut from `0:39` to `1:05`) [Video2](https://www.youtube.com/watch?v=4zWq3pkJ8NI)
+![Video 2 Constant K](results/vid2_est.png)
+![Video 2 Dynamic K](results/vid22_est.png)
+
+#### Drone Video 3 [Video3](https://www.youtube.com/watch?v=Zwa5i1yZu7w)
+![Video 3 Constant K](results/vid3_est.png)
+![Video 3 Dynamic K](results/vid32_est.png)
+
+
+#### Conclusion
+- For some reason the results on KITTI are worse then that with just Visual Odometry that I have acheived in past.
+- It is better to have Constant K for drone videos (scale std was >0.2 compared to 0.08-0.02 for KITTI)
+- Dynamic K helps with stable videos.
+
+
+
+
 
 
 
