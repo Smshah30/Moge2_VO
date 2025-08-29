@@ -85,7 +85,7 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 #### Drone Video 1 ( Cut from `1:49` to `2:55`) [Video1](https://www.youtube.com/watch?v=8zJ5wv6NIlY)
 ![Video 1](results/vid1_est.png)
 
-#### Drone Video 3 ( Cut from `0:39` to `1:05`) [Video2](https://www.youtube.com/watch?v=4zWq3pkJ8NI)
+#### Drone Video 2 ( Cut from `0:39` to `1:05`) [Video2](https://www.youtube.com/watch?v=4zWq3pkJ8NI)
 ##### Constant K
 ![Video 2 Constant K](results/vid2_est.png)
 
