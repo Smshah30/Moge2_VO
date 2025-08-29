@@ -5,7 +5,8 @@ This repository implements a simple **Visual Odometry (VO)** pipeline built on t
 It generates metric point maps using MoGe2, aligns consecutive frames with **RANSAC + Open3D ICP**, and reconstructs a trajectory.
 
 ---
-
+## 🔀 Pipeline 
+![piplene](results/pipeline2.png)
 ## 📦 Setup
 
 ### 1. Clone this repo
