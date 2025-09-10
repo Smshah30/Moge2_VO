@@ -67,7 +67,7 @@ python3 eval_kitti.py  --gt_poses ~/kitti/dataset/poses/00.txt --est_poses poses
 - Intrinsics however were inconsistent for consecutive frames.
   - For KITTI dataset, though there were wobles in K, in the end the ATE was less for Dynamic K rather than a Constant K.
   - For Drone videos, having Constant K `--use_first_K` helped the final result to be less shaky.
-- Surprising, initially ICP+RANSAC gave pretty good result APE <=2 . However, at the end of the dataset the ATE increased to 303 (MAIN REASON FOR THE DELAY)
+- Surprising, initially ICP+RANSAC gave pretty good result APE <=2 . However, at the end of the dataset the ATE increased to 303.
 - When using just ICP, I observed a huge error in the first step. To decrease this, I though od using PnP-RANSAC to get initial estimate of the pose.
 
 #### Images
